@@ -65,6 +65,8 @@ const HoverableSpan: React.FC<HoverableSpanProps> = memo(({ hoverType, hovered, 
   );
 });
 
+HoverableSpan.displayName = 'HoverableSpan';
+
 interface HoverableIconProps {
   src: string;
   alt: string;
@@ -72,8 +74,8 @@ interface HoverableIconProps {
   handleHover: (hover: HoveredItem) => void;
 }
 
+
 const HoverableIcon: React.FC<HoverableIconProps> = memo(({ src, alt, hoverType, handleHover }) => {
-  console.log(hoverType)
   return (
     <li
       onMouseEnter={() => handleHover(hoverType)}
@@ -89,3 +91,5 @@ const HoverableIcon: React.FC<HoverableIconProps> = memo(({ src, alt, hoverType,
     </li>
   );
 });
+
+HoverableIcon.displayName = 'HoverableIcon';
